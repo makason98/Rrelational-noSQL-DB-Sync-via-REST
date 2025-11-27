@@ -12,7 +12,7 @@ REST API for data synchronization between SQL Server and CouchDB.
 
 1. **Clone/Navigate to project**
    ```bash
-   cd /home/tehnic/.gemini/antigravity/scratch/proiect-sabd
+   proiect-sabd
    ```
 
 2. **Start databases (Docker)**
