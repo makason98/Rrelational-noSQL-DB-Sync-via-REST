@@ -106,6 +106,15 @@ If you have old data in SQL Server created before synchronization was implemente
 python migrate_to_couchdb.py
 ```
 
+<img width="1724" height="930" alt="image" src="https://github.com/user-attachments/assets/546ce3f9-dce0-40d7-be56-36c58d722cf6" />
+<img width="1724" height="930" alt="image" src="https://github.com/user-attachments/assets/6958921e-16dc-43d9-9409-c34a66b6791f" />
+<img width="1724" height="930" alt="image" src="https://github.com/user-attachments/assets/61b8b9e3-0a4b-4ef6-b59d-0355d2965589" />
+<img width="1724" height="930" alt="image" src="https://github.com/user-attachments/assets/e0c50d12-97cf-4cee-a250-c0fb15fae549" />
+
+
+
+
+
 ## 📄 License
 
 Academic project - Advanced Database Systems (SABD)
