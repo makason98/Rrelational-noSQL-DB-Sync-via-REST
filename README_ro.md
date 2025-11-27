@@ -1,62 +1,61 @@
-# Student Management System (Hybrid SQL + NoSQL)
+# Sistem Gestiune Studenți (Hibrid SQL + NoSQL)
 
-REST API for data synchronization between SQL Server and CouchDB.
+API REST pentru sincronizarea datelor între SQL Server și CouchDB.
 
-## 🚀 Quick Start
+## 🚀 Pornire Rapidă
 
-### Prerequisites
+### Precondiții
 - Docker
 - Python 3.10+
 
-### Installation
+### Instalare
 
 1. **Clone/Navigate to project**
    ```bash
    cd /home/tehnic/.gemini/antigravity/scratch/proiect-sabd
    ```
 
-2. **Start databases (Docker)**
+2. **Pornire baze de date (Docker)**
    ```bash
    docker start sabd_sqlserver sabd_couchdb
-   # Or create them if they don't exist (see PORNIRE_DE_LA_ZERO_en.md)
+   # Sau creează-le dacă nu există (vezi PORNIRE_DE_LA_ZERO.md)
    ```
 
-3. **Install Python dependencies**
+3. **Instalare dependențe Python**
    ```bash
    python3 -m venv venv
    source venv/bin/activate
    pip install -r requirements.txt
    ```
 
-4. **Start API**
+4. **Pornire API**
    ```bash
    uvicorn main:app --reload
    ```
 
-5. **Access application**
+5. **Accesare aplicație**
    - API Docs: http://127.0.0.1:8000/docs
    - CouchDB UI: http://localhost:5984/_utils (admin/password)
 
-## 📚 Documentation
+## 📚 Documentație
 
-- **[RAPORT_TEHNIC_en.md](RAPORT_TEHNIC_en.md)** - Complete technical report
-- **[PORNIRE_DE_LA_ZERO_en.md](PORNIRE_DE_LA_ZERO_en.md)** - Detailed startup guide
-- **[ARHITECTURA_en.md](ARHITECTURA_en.md)** - Architecture guide
+- **[RAPORT_TEHNIC.md](RAPORT_TEHNIC.md)** - Raport tehnic complet
+- **[PORNIRE_DE_LA_ZERO.md](PORNIRE_DE_LA_ZERO.md)** - Ghid detaliat de pornire
 
-## 🏗️ Architecture
+## 🏗️ Arhitectură
 
 ```
-Client → FastAPI → SQL Server (relational)
+Client → FastAPI → SQL Server (relațional)
                  → CouchDB (NoSQL)
 ```
 
-## 🔧 Technologies
+## 🔧 Tehnologii
 
 - **Backend**: Python 3.12, FastAPI
 - **SQL**: SQL Server 2022 (Microsoft)
 - **NoSQL**: CouchDB 3.3.3 (Apache)
 - **ORM**: SQLAlchemy
-- **Validation**: Pydantic
+- **Validare**: Pydantic
 
 ## 📝 API Endpoints
 
@@ -81,31 +80,31 @@ Client → FastAPI → SQL Server (relational)
 - `PUT /enrollments/{id}` - Update
 - `DELETE /enrollments/{id}` - Delete
 
-## 🧪 Testing
+## 🧪 Testare
 
 ```bash
-# Automated testing
+# Testare automată
 python test_consistency.py
 
-# Manual testing
-# Access http://127.0.0.1:8000/docs
+# Testare manuală
+# Accesează http://127.0.0.1:8000/docs
 ```
 
-## 📊 Synchronization
+## 📊 Sincronizare
 
-All CRUD operations (Create, Read, Update, Delete) automatically synchronize data between SQL Server and CouchDB.
+Toate operațiile CRUD (Create, Read, Update, Delete) sincronizează automat datele între SQL Server și CouchDB.
 
-SQL Server = primary source of truth  
-CouchDB = replica for backup/replication
+SQL Server = sursa principală de adevăr  
+CouchDB = replică pentru backup/replicare
 
-## 🔗 Migrate Existing Data
+## 🔗 Migrare Date Existente
 
-If you have old data in SQL Server created before synchronization was implemented:
+Dacă ai date vechi în SQL Server create înainte de implementarea sincronizării:
 
 ```bash
 python migrate_to_couchdb.py
 ```
 
-## 📄 License
+## 📄 Licență
 
-Academic project - Advanced Database Systems (SABD)
+Proiect academic - Sisteme Avansate de Baze de Date (SABD)
